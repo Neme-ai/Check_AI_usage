@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>AI 订阅用量助手</title>
+<style>body{width:320px;margin:18px;background:#18202f;color:#e5eaf3;font:14px 'Microsoft YaHei UI',sans-serif}h1{font-size:18px}p{line-height:1.6;color:#b8c5d9}button,input{box-sizing:border-box;width:100%;padding:9px;margin:5px 0;border:1px solid #405571;border-radius:6px}button{background:#314760;color:white;cursor:pointer}input{background:#111827;color:white}#message{min-height:35px;color:#77dfbc;white-space:pre-wrap}.small{font-size:12px}label{display:block;margin:10px 0}label input{width:auto}</style>
+<h1>AI 订阅用量助手</h1>
+<p>复用当前 Chrome 登录状态。用量只发往本机悬浮窗。</p>
+<input id="token" type="password" autocomplete="off" placeholder="粘贴悬浮窗菜单中的配对码">
+<button id="pair">保存配对码并连接</button>
+<button id="codex">打开 Codex / Work 监控页</button>
+<button id="claude">打开 Claude 监控页</button>
+<button id="refresh">立即刷新</button>
+<label><input id="pause" type="checkbox">暂停监控</label>
+<div id="message" role="status"></div>
+<p id="last" class="small" style="white-space:pre-line"></p>
+<p class="small">会创建两个独立固定标签页，每分钟重新加载一次。请保持 Chrome 和监控标签页打开；浏览器休眠可能延后刷新。不会点击充值、购买或额度重置按钮。</p>
+<script src="popup.js"></script></html>

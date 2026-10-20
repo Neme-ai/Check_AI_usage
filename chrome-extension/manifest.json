@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "AI 订阅用量助手",
+  "version": "0.2.0",
+  "description": "读取官方用量页并发送到本机悬浮窗。无需再次登录，不读取密码或 Cookie。",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["https://chatgpt.com/*", "https://claude.ai/*", "http://127.0.0.1/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_title": "AI 订阅用量助手", "default_popup": "popup.html"},
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/settings/usage*", "https://chatgpt.com/codex/settings/usage*", "https://claude.ai/settings/usage*", "https://claude.ai/new*"],
+    "js": ["parser.js", "content.js"],
+    "run_at": "document_idle"
+  }]
+}

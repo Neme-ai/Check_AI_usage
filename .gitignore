@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+runtime/
+build/
+dist/
+AIUsageMonitorDebug.spec
+collector.py
+browser_login.py
+requirements-lock.txt
